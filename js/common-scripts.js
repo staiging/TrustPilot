@@ -10,6 +10,16 @@
             $(".nav-wrap, .dashboard-nav").fadeToggle()
         });
         
+
+
+        $('.mega-menu').parent('li').addClass('drop-down');
+        $('.drop-down').each(function () {
+            var $$this = $(this);
+            $$this.find('> a').click(function (e) {
+                e.preventDefault();
+                $('.mega-menu').slideToggle();
+            })
+        })
         
         
         if ($('.review-item-wrap').length) {
@@ -163,9 +173,101 @@
                 }
             })
         })
-        
-        
-        
+
+
+        //pricing page
+        $(".price-advantage").each(function(){
+            var $this = $(this);
+            $this.find(" > .price-features-btn span").on("click touch", function(){
+                $(".price-advantage").addClass("list-active")
+            })
+        })
+
+
+        //rate onyx keyup
+        $(".tell-us-wrap textarea, .tell-us-input-row input").keyup(function(){
+            $(".onyx-login-wrap").fadeIn();
+        });
+
+
+        //pricing popup
+        $('.price-features-btn span').click(function () {
+            $(".popup-wrap").fadeIn()
+        });
+        $('.popup-close').click(function () {
+            $(".popup-wrap").fadeOut()
+        });
+
+
+
+        $('.location-popup').click(function (e) {
+            e.preventDefault();
+            $(".popup-wrap").fadeIn()
+        });
+
+
+
+
+        // $(document).ready(function() {
+
+        //     var progress = $('.bar .progress')
+
+        //     function counterInit( fValue, lValue ) {
+
+        //         var counter_value = parseInt( $('.detais-bar-item-right dfn').text() );
+        //         counter_value++;
+
+        //         if( counter_value >= fValue && counter_value <= lValue ) {
+
+        //         $('.detais-bar-item-right dfn').text( counter_value + '%' );
+        //         progress.css({ 'width': counter_value + '%' });
+
+        //         setTimeout( function() {
+        //             counterInit( fValue, lValue );
+        //         }, 50 );
+
+
+        //         }
+
+        //     }
+
+        //     counterInit( 0, 100 );
+
+        // });
+
+
+
+
+        // Récup. éléments concernés
+        var oBtns = $("[data-progress]");
+        //Action au click
+        oBtns.on("click", function () {
+        var $this = $(this);
+        var progress = $this.data("progress");
+        var size = $this.data("value");
+        $("#" + progress)
+            .stop()
+            .css({
+            width: 0
+            })
+            .animate({
+            width: size + "%"
+            }, {
+            duration: 2000,
+            step: function (valeur, fx) {
+                var elem = $(fx.elem);
+                elem.text(parseInt(valeur,10) + "%")
+            }
+            });
+        });
+        // Déclenche l'animation
+        oBtns.trigger("click");
+
+
+
+
+
+
         var header = new Headroom(document.querySelector('header'), {
             tolarence: 80,
             offset: 155,
@@ -174,11 +276,12 @@
                 initial: 'headroom',
                 pinned: 'slidedown',
                 unpinned: 'slideup'
-
-
             }
         });
         header.init();
+
+   
+
         
 		
 	})// End ready function.
