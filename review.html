@@ -119,14 +119,14 @@
                             </div>
                         </aside>
                         <div class="review-content-wrap">
-                            <div class="review-content-top flex-box">
+                            <a href="#" class="review-content-top flex-box">
                                 <div class="review-content-top-profile flex">
                                     <div class="review-content-profile-thumb">
                                         <img src="img/review/profile.png" alt="profile">
                                     </div>
                                     <div class="review-content-profile-text">
                                         <h6>shazzad anik</h6>
-                                        <a href="#">Write a review</a>
+                                        <span>Write a review</span>
                                     </div>
                                 </div>
                                 <div class="review-content-top-radio flex">
@@ -136,7 +136,7 @@
                                     <input type="radio" name="radio" value="radio-4">
                                     <input type="radio" name="radio" value="radio-5">
                                 </div>
-                            </div>
+                            </a>
                             <div class="review-detais-wrap">
                                 <h3>Reviews</h3>
                                 <div class="review-detais-bar">
@@ -144,45 +144,55 @@
                                         <div class="detais-bar-item-left">
                                             <span>5 Star</span>
                                         </div>
-                                        <div class="bar"></div>
+                                        <div class="progress">
+                                            <div class="progress-bar" id="five-star"></div>
+                                        </div>
                                         <div class="detais-bar-item-right">
-                                            <dfn>95%</dfn>
+                                            <dfn data-progress="five-star" data-value="95">95%</dfn>
                                         </div>
                                     </div>
                                     <div class="review-detais-bar-item flex-box">
                                         <div class="detais-bar-item-left">
                                             <span>4 Star</span>
                                         </div>
-                                        <div class="bar four-star"></div>
+                                        <div class="progress">
+                                            <div class="progress-bar" id="four-star"></div>
+                                        </div>
                                         <div class="detais-bar-item-right">
-                                            <dfn>70%</dfn>
+                                            <dfn data-progress="four-star" data-value="70">70%</dfn>
                                         </div>
                                     </div>
                                     <div class="review-detais-bar-item flex-box">
                                         <div class="detais-bar-item-left">
                                             <span>3 Star</span>
                                         </div>
-                                        <div class="bar three-star"></div>
+                                        <div class="progress">
+                                            <div class="progress-bar" id="three-star"></div>
+                                        </div>
                                         <div class="detais-bar-item-right">
-                                            <dfn>30%</dfn>
+                                            <dfn data-progress="three-star" data-value="30">30%</dfn>
                                         </div>
                                     </div>
                                     <div class="review-detais-bar-item flex-box">
                                         <div class="detais-bar-item-left">
                                             <span>2 Star</span>
                                         </div>
-                                        <div class="bar two-star"></div>
+                                        <div class="progress">
+                                            <div class="progress-bar" id="two-star"></div>
+                                        </div>
                                         <div class="detais-bar-item-right">
-                                            <dfn>03%</dfn>
+                                            <dfn data-progress="two-star" data-value="3">03%</dfn>
                                         </div>
                                     </div>
                                     <div class="review-detais-bar-item flex-box">
                                         <div class="detais-bar-item-left">
                                             <span>1 Star</span>
                                         </div>
-                                        <div class="bar one-star"></div>
+                                        <div class="progress">
+                                            <div class="progress-bar" id="one-star"></div>
+                                        </div>
                                         <div class="detais-bar-item-right">
-                                            <dfn>01%</dfn>
+                                            <dfn data-progress="one-star" data-value="1">01%</dfn>
                                         </div>
                                     </div>
                                 </div>
@@ -243,8 +253,7 @@
                                 <li><a href="#">Products</a></li>
                                 <li><a href="pricing.html">Plans &amp; Pricing</a></li>
                                 <li><a href="business-login.html">Business log in</a></li>
-                                <li><a href="#">Blog for business</a></li>
-                                <li><a href="#">Trust business</a></li>
+                                <li><a href="business-blog.html">Blog for business</a></li>
                             </ul>
                         </div>
                         <div class="footer-widget">
