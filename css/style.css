@@ -624,7 +624,6 @@ body,html{height: 100%;}
 .review-content-profile-text{width: calc(100% - 70px); padding-left: 10px;}
 .review-content-profile-text h6{font-size: 22px; line-height: normal; font-weight: 700; color: #000000;}
 .review-content-profile-text span{font-family: 'Mulish', sans-serif; font-size: 15px; line-height: 25px; font-weight: 600; color: #52ab98;}
-.review-content-top-radio{}
 .review-content-top-radio input[type="radio"]{-webkit-appearance: none; appearance: none; width: 30px; height: 30px; border-radius: 4px; box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.25); background-color: #ffffff; margin-left: 10px; position: relative; cursor: pointer;}
 .review-content-top-radio input[type="radio"]:after{content: ''; position: absolute; width: 100%; height: 100%; top: 0; left: 0; background-image: url(../svgs/mdi_star.svg); background-position: center center; background-repeat: no-repeat; background-size: cover; opacity: 0.3;}
 .review-content-top-radio input[type="radio"]:checked:after{opacity: 1;}
@@ -635,7 +634,7 @@ body,html{height: 100%;}
 .detais-bar-item-left span{font-size: 15px; line-height: 25px; color: #000000; padding: 2px 11px; text-align: center; box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.25); font-size: 15px; line-height: 25px; font-family: 'Mulish', sans-serif; font-weight: 600; border-radius: 4px;}
 .detais-bar-item-right{width: auto; padding-left: 10px;}
 .detais-bar-item-right dfn{font-size: 15px; line-height: 25px; color: #000000; font-family: 'Mulish', sans-serif; font-weight: 400;}
-.review-detais-bar-item .progress{width: calc(100% - 150px); height: 6px; background-color: #d9d9d9; border-radius: 5px; position: relative;}
+.review-detais-bar-item .progress{width: calc(100% - 130px); height: 6px; background-color: #d9d9d9; border-radius: 5px; position: relative;}
 .review-detais-bar-item .progress-bar{width: 0; top: 0; left: 0; transition: 0.4s ease-in-out; height: 100%; border-radius: 5px; background-color: #52ab98;}
 .review-detais-bar-item .progress.four-star .progress-bar{width: 70%;}
 .review-detais-bar-item .progress.three-star .progress-bar{width: 30%;}
