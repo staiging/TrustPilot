@@ -192,10 +192,10 @@
 
         //pricing popup
         $('.price-features-btn span').click(function () {
-            $(".popup-wrap").fadeIn()
+            $(".popup-wrap, .video-record-popup").fadeIn()
         });
         $('.popup-close').click(function () {
-            $(".popup-wrap").fadeOut()
+            $(".popup-wrap, .file-upload-popup, .video-record-popup").fadeOut()
         });
 
 
@@ -204,37 +204,6 @@
             e.preventDefault();
             $(".popup-wrap").fadeIn()
         });
-
-
-
-
-        // $(document).ready(function() {
-
-        //     var progress = $('.bar .progress')
-
-        //     function counterInit( fValue, lValue ) {
-
-        //         var counter_value = parseInt( $('.detais-bar-item-right dfn').text() );
-        //         counter_value++;
-
-        //         if( counter_value >= fValue && counter_value <= lValue ) {
-
-        //         $('.detais-bar-item-right dfn').text( counter_value + '%' );
-        //         progress.css({ 'width': counter_value + '%' });
-
-        //         setTimeout( function() {
-        //             counterInit( fValue, lValue );
-        //         }, 50 );
-
-
-        //         }
-
-        //     }
-
-        //     counterInit( 0, 100 );
-
-        // });
-
 
 
 
@@ -264,7 +233,27 @@
         oBtns.trigger("click");
 
 
+        /*Form*/
+        if($('.file-upload-popup-form').length){
+            document.getElementById("upload-btn").onchange = function () {
+                document.getElementById("uploadfile").value = this.value.replace("C:\\fakepath\\", "");
+            };
+        }
+        /*Form*/
 
+
+        $('.video-upload').click(function (e) {
+            e.preventDefault();
+            $(".file-upload-popup").fadeIn()
+        });
+        $('.video-record').click(function (e) {
+            e.preventDefault();
+            $(".video-record-popup").fadeIn()
+        });
+        $('.popup-close').click(function () {
+            $(".file-upload-popup, .video-record-popup").fadeOut()
+        });
+        
 
 
 
