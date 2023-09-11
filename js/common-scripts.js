@@ -250,10 +250,13 @@
             e.preventDefault();
             $(".video-record-popup").fadeIn()
         });
-        $('.popup-close').click(function () {
-            $(".file-upload-popup, .video-record-popup").fadeOut()
+        $('.text-review').click(function (e) {
+            e.preventDefault();
+            $(".text-review-popup").fadeIn()
         });
-        
+        $('.popup-close').click(function () {
+            $(".file-upload-popup, .video-record-popup, .text-review-popup").fadeOut()
+        });
 
 
 
