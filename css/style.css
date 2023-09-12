@@ -1179,12 +1179,13 @@ padding: 40px 15px 30px; position: relative;}
 .btn-browser{float: left; width: 95px; height: 50px; background-color: #000000; color: #FFFFFF; border-radius: 0 3px 3px 0; position: relative; text-align: center; line-height: 50px; font-size: 16px; font-weight: 600; font-family: 'Montserrat', sans-serif;}
 .btn-browser input.upload{width: 100%; height: 100%; position: absolute; cursor: pointer; top: 0; left: 0; opacity: 0;}
 .file-input-row input[type="submit"], .video-record-popup-inner input[type="submit"]{font-size: 17px; line-height: normal; min-width: 100px; height: 50px; font-weight: 700; font-family: 'Mulish', sans-serif; padding: 10px 15px; border-radius: 3px; border: 1px solid #000000;}
+
 .video-record-popup{padding: 150px 0 70px; overflow-y: scroll;}
 .video-record-popup::-webkit-scrollbar{display: none;}
 .video-record-popup-main{padding: 0;}
 .video-record-popup-main .common-wrap{max-width: 740px; width: 100%;}
 .video-record-popup-inner{float: left; width: 100%; border-radius: 10px; background-color: #FFFFFF; box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25); padding: 60px 10px 25px; position: relative;}
-.video-record-popup-inner video{float: left; width: 100%; min-height: 370px;}
+.video-record-popup-inner video{float: left; width: 100%; min-height: 370px; background-color: #000000;}
 .video-record-popup-inner input[type="submit"]{margin-top: 20px;}
 .text-review-popup{position: fixed; width: 100%; height: 100vh; top: 0; left: 0; background-color: rgba(0, 0, 0, 0.7); z-index: 9; padding: 150px 0 70px; overflow-y: scroll; display: none;}
 .text-review-popup::-webkit-scrollbar{display: none;}
@@ -1213,6 +1214,15 @@ padding: 40px 15px 30px; position: relative;}
 .textarea-toltip-inner ul li{float: left; width: 100%; position: relative; padding-left: 15px; font-size: 15px; line-height: normal; margin-bottom: 10px; color: #000000;}
 .textarea-toltip-inner ul li::after{content: ''; position: absolute; width: 5px; height: 5px; top: 7px; left: 0; border-radius: 100%; background-color: #000000;}
 /*===Review-option Page End===*/
+
+.video-record-title{float: left; width: 100%; margin-bottom: 25px; text-align: center;}
+.video-record-title h4{font-weight: 700; color: #000000;}
+.guideline-title{float: left; width: 100%; margin-top: 7px;}
+.guideline-title h4{color: #ff1d1d; text-align: center; font-size: 18px; line-height: normal;}
+.record-btns{float: left; width: 100%; justify-content: center; margin-top: 20px;}
+.record-btns button{padding: 10px 15px; color: #FFFFFF; border-radius: 5px; font-size: 16px; line-height: normal; margin-right: 10px; border: 1px solid #52AB98; background-color: #52AB98;}
+.record-btns button:last-child{margin-right: 0;}
+.upload-btn{float: left; width: 100%; justify-content: center; margin-top: 20px;}
 
 
 
