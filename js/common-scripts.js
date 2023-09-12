@@ -260,6 +260,8 @@
 
 
 
+
+
         var header = new Headroom(document.querySelector('header'), {
             tolarence: 80,
             offset: 155,
@@ -271,6 +273,99 @@
             }
         });
         header.init();
+
+
+
+
+        (() => {
+            const recordingChunks = [];
+            let recorder;
+            
+            const warning = document.querySelector('[data-warning]');
+            const video = document.querySelector('[data-video]');
+            const buttonRecord = document.querySelector('[data-button-record]');
+            const buttonStop = document.querySelector('[data-button-stop]');
+          
+            // Hide the warning and show the form.
+            const resetWarning = () => {
+              warning.innerHTML = '';
+              
+              warning.classList.add('hidden');
+              video.classList.add('hidden');
+              buttonStop.classList.add('hidden');
+              buttonRecord.classList.remove('hidden');
+            }
+            
+            //Show a warning
+            const showWarning = (message) => {
+              warning.innerHTML = message;
+              
+              warning.classList.remove('hidden');
+              video.classList.add('hidden');
+              buttonRecord.classList.add('hidden');
+              buttonStop.classList.add('hidden');
+            };
+            
+            //Save the recording chunks when they become available
+            const saveRecordingChunk = event => {
+              recordingChunks.push(event.data);
+            };
+          
+            //Create an url of the recording and show it in the video
+            const saveRecording = event => {
+              const recordingBlob = new Blob(recordingChunks, {
+                  type: 'video/webm',
+              });
+              const recordingUrl = URL.createObjectURL(recordingBlob);
+              console.log(recordingBlob, recordingUrl);
+              video.srcObject = undefined;
+              video.src = recordingUrl;
+              video.muted = false;
+            };
+            
+            // Check if our browser supports the MediaRecorder APi.
+            if (('MediaRecorder' in window)) {    
+              
+              const record = event => {
+                navigator.mediaDevices.getUserMedia({
+                  audio: true,
+                  video: true,
+                }).then(stream => {
+                  recorder = new MediaRecorder(stream);
+                  recorder.start();
+                  recorder.ondataavailable = saveRecordingChunk;
+                  recorder.onstop = saveRecording;
+                  
+                  video.srcObject = stream;
+                  video.muted = true;
+                  
+                  video.classList.remove('hidden');
+                  buttonRecord.classList.add('hidden');
+                  buttonStop.classList.remove('hidden');
+                }).catch(error => {
+                  showWarning(error)
+                });
+              };
+              
+              const stop = () => {
+                recorder.stop();
+                
+                buttonRecord.classList.remove('hidden');
+                buttonStop.classList.add('hidden');
+              };
+              
+              // Add an eventListener to the record button so we can record when the user presses the button.
+              buttonRecord.addEventListener('mouseup', record);
+              
+              // Add an eventListener to the stop button so we can stop recording when the user presses the button.
+              buttonStop.addEventListener('mouseup', stop);
+              
+            }
+            
+          })();
+
+
+        
 
    
 
