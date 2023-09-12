@@ -215,12 +215,41 @@
         </section>
 
 
-        <section class="video-record-popup">
+        <!-- <section class="video-record-popup">
             <div class="video-record-popup-main flex">
                 <div class="common-wrap clear">
                     <div class="video-record-popup-inner">
                         <video controls></video>
                         <input type="submit" value="Upload video">
+                        <div class="popup-close">
+                            <img src="svgs/akar-icons_cross.svg" alt="cross">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+
+
+
+        <section class="video-record-popup">
+            <div class="video-record-popup-main flex">
+                <div class="common-wrap clear">
+                    <div class="video-record-popup-inner">
+                        <div class="video-record-title">
+                            <h4>Start recording your video review</h4>
+                        </div>
+                        <video data-video class="video hidden" controls autoplay></video>
+                        <div class="guideline-title">
+                            <h4>Click the "Start video Recording" button to start recording</h4>
+                        </div>
+                        <div class="record-btns flex">
+                            <button data-button-record class="button">Record</button>
+                            <button data-button-stop class="button button--red hidden">Stop recording</button>
+                        </div>
+                        <div class="upload-btn flex">
+                            <input type="submit" value="Upload video">
+                        </div>
                         <div class="popup-close">
                             <img src="svgs/akar-icons_cross.svg" alt="cross">
                         </div>
