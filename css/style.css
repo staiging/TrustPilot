@@ -1220,7 +1220,7 @@ padding: 40px 15px 30px; position: relative;}
 .guideline-title{float: left; width: 100%; margin-top: 7px;}
 .guideline-title h4{color: #ff1d1d; text-align: center; font-size: 18px; line-height: normal;}
 .record-btns{float: left; width: 100%; justify-content: center; margin-top: 20px;}
-.record-btns button{padding: 10px 15px; color: #FFFFFF; border-radius: 5px; font-size: 16px; line-height: normal; margin-right: 10px; border: 1px solid #52AB98; background-color: #52AB98;}
+.record-btns button{padding: 10px 15px; cursor: pointer; color: #FFFFFF; border-radius: 5px; font-size: 16px; line-height: normal; margin-right: 10px; border: 1px solid #52AB98; background-color: #52AB98;}
 .record-btns button:last-child{margin-right: 0;}
 .upload-btn{float: left; width: 100%; justify-content: center; margin-top: 20px;}
 
